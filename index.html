@@ -8,12 +8,30 @@
     <link rel="stylesheet" href="index.css">
    
 </head>
+
 <body>
-  
-   <p id="dialog1">This is the begining</p>
-   <button type="button" onclick ="mine()">Start</button>
+<div class = "container">
+        <div id = "box1"> 
+    <p id = "dialog1">Well hello there. If you want to cross the bridge, you must answer 3 out of 5 questions correctly. When you are ready to begin press the  button below.</p>
+    <p id ="dialog2"></p>
+    <p id ="dialog3"></p>
+    
+    <button  id = "startBtn" onclick ="mine()">Click Me</button>
+    
+    <input type ="text" id ="userAnswer" name ="userAnswer">
+    <button type="submit" id ="btn2" onclick ="statement2()">I am button 2</button>
+    <button id="btn3" onclick = "statement3()">I am button 3</button>
+    <button id ='btn4' onclick="statement4()">I am button 4</button>
+    <button id ="btn5" onclick+ "statement5()">I am button 5</button>
+</div>
+<div>
+    <h1 id = "score"></h1>
+</div>
+
+
 
     <script src = "index.js"></script>
     <script src = "questions.js"></script>
+    
 </body>
 </html>
