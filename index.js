@@ -1,11 +1,8 @@
 let userScore = 1
-document.getElementById('btn2').style.display="none";//blocks display of buttons
-document.getElementById('btn3').style.display="none";
-document.getElementById('btn4').style.display="none";
-document.getElementById('btn5').style.display="none";
+document.getElementsByClassName("btn").style.display= "none";
 
 
-
+document.getElementById("background").style.width= "1000px";
 
 
 function mine(){
