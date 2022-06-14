@@ -1,15 +1,15 @@
 let userScore = 1
-document.getElementsByClassName("btn").style.display= "none";
+document.getElementById("btn2").style.display= "none";
 
 
-document.getElementById("background").style.width= "1000px";
+//document.getElementById("background").style.display.height="50px";
 
 
 function mine(){
     document.getElementById('startBtn').style.display = 'none';//blocks display of start button
 
     document.getElementById("dialog1").innerHTML = "Only one color, but not one size, stuck at the bottom, yet easily flies. Present in sun, but not in rain, doing no harm, and feeling no pain. What am I?";//prints first question
-    document.getElementById('btn2').style.display = "";//opens display of btn 2
+    document.getElementById('btn2').style.display = " ";//opens display of btn 2
      }
 //button 2 sends you to statement 2
 function statement2(){
@@ -22,6 +22,7 @@ function statement2(){
         document.getElementById("btn3").style.display= ""//opens display of btn3
         userScore =userScore + 1;//adds one to score counter
        console.log(userScore);
+       displayScore();
         }
         else 
         {document.getElementById("dialog3").innerHTML ="Ha! I knew you weren't smart enough to answer that question! When you are ready press the button below";   //else statement is not working.
@@ -42,6 +43,7 @@ function statement2(){
         document.getElementById('dialog2').innerHTML = "You really think you're smart, don't you? I know you won't get the next one! When you're ready press the button below.";
         userScore=UserScore +1;
         console.log(userScore);
+        displayScore();
         document.getElementById('btn4').style.display ="none";
         document.getElementById('btn5').style.display ="";
     }else{
@@ -49,7 +51,9 @@ function statement2(){
     }
  }     
  
- 
+ function displayScore(){
+    documentGetElementById("score").InnerHTML=`Your Score is ${userScore};`
+ }
 
 
 
