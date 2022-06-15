@@ -4,36 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riddlegame</title>
-    <link rel="stylesheet" href="index.css">
-    
+    <link rel="stylesheet" href = "index.CSS">
+    <title>RiddleGame</title>
 </head>
-
-<body>
-    <img id="background" src="assets\hert-niks-tyI1b2abVKE-unsplash.jpg">
-<div class = "container">
-    <div id = "box1"> 
-        <p id = "dialog1">Well hello there. If you want to cross the bridge, you must answer 3 out of 5 questions correctly. When you are ready to begin press the  button below.</p>
-        <p id ="dialog2"></p>
-        <p id ="dialog3"></p>
-        <button id = "startBtn" onclick ="mine()">Click Me</button>
-        <input type ="text" id ="userAnswer" name ="userAnswer">
-    
-        
-        <button type="submit" id ="btn2" onclick ="statement2()">I am button 2</button>
-        <button id="btn3" onclick = "statement3()">I am button 3</button>
-        <button id ='btn4' onclick="statement4()">I am button 4</button>
-            
-    </div>
-</div>
-<div id ="scoreBox">
-    <h1 id = "score"></h1>
-</div>
+    <body>
+        <img id="background"src= "assets\hert-niks-tyI1b2abVKE-unsplash.jpg">
+        <div id ='box1'>
+        <form>
+            <div>
+                <p id="startup">Well hello there. This is <strong>MY</strong>bridge. If you want to cross you must answer 3 out of 5 questions correctly.</p>
+                <button id="startBtn" onclick= "statement1()">Continue</button>
+                <input type="text" id="userAnswer" name="userAnswer">
+                <button id ="btn2" onclick ='statement2()'>I am button 2</button>
+            </div>
+            <div id="scoreBox">
+                <h1 id="score"></h1>
+            </div>
+        </form>
+        </div>
 
 
 
-    <script src = "index.js"></script>
-    <script src = "questions.js"></script>
-    
+<script src="index.js"></script>  
 </body>
 </html>
