@@ -1,16 +1,20 @@
 body{ 
     background-image: url("assets/hert-niks-tyI1b2abVKE-unsplash.jpg");
     background-repeat:no-repeat;
-    background-size:cover;
-}   
+    background-size:1200px 900px;
+    
+}  
+
 #startup{
-    font-family:fantasy;
+    font-family:sans-serif; 
     font-size: 45px;
+    text-shadow: 2px 2px brown;
+    padding: 50px;
 }
 #dialog1{
-    font-family:fantasy;
+    font-family: sans-serif;
     font-size: 45px;
-    
+    text-shadow:2px 2px brown;
 }
 
 input[type=text]{
@@ -27,7 +31,7 @@ input[type=text]{
 
 
 .continue{
-    background-color: red;
+    background-color: brown;
     color:white;
     margin: 20px;
     font-size: 18px;
