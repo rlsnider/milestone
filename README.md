@@ -1,8 +1,14 @@
 # milestone description
 # riddle game
 -- Create 5 questions for user to answer in order to cross the "bridge".
--- Answer Correlcly, get one point, incorrectly, stranger says he'll give you another chance, as long as you havent missed 3 out of 5 questions.
--- Once you answer 3 out of 5 correctly, he allows you to cross the bridge with the warning that the next challenge will be harder.
+-- After you answer all 5 questions, if you get 3 or more right, you cross the bridge.
 --Lose, and he dances around and laughs at you.
+## user score
+--function should add 1 to score if question is answered correcrly, and add 0 to score if answer is incorrectly, store in variable to see if you won.
+## Credits
+--I'd like to give a big thank you to https://riddles.com . This is were some of the questions came from.
+--W3Shcools for their clear and concise tutoritals on CSS, HTML and JavaScript.
+--YouTuber   whose short online lessons give me great insight into how JavaScript works by using extremely well scripted tutorials.
+--A big shout out to Hert Niks for his beautiful picture I used as a background.
 
 

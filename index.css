@@ -10,7 +10,7 @@ body{
 #dialog1{
     font-family:fantasy;
     font-size: 45px;
-    outline:2px red;
+    
 }
 
 input[type=text]{

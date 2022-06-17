@@ -10,7 +10,7 @@
     <body>
     <form id>
         <div>
-            <p id="startup">Well hello there. This is <strong>MY</strong> bridge.<br> If you want to cross you must answer<br> 3 out of 5 questions correctly. <br>Press the continue button to get your first question.</p>
+            <p id="startup">Well hello there. This is <strong>MY</strong> bridge.<br> You want to cross?<br>I'll ask you five questions. <br>If you can get at least 3 correct I'll let you pass. Press the continue button to get your first question.</p>
         </div>
         <div>
             <button type="button" class= "continue" id="startBtn" onclick= "statement1()">Continue</button>
@@ -20,16 +20,22 @@
             <input type="text" id="users" name="users" placeholder = "ANSWER">
         </div>
         <div>
-            <button type ="button"class = "continue" id ="btn2" onclick ='statement2()'>ONE WORD</button>
-            <button type="button" class = "continue" id ="btn3" onclick ='statement3()'>Continue</button>
-            <button type="button" class="continue" id ="btn4" onclick ="statement4()">ONE WORD</button>
+            <button type="button" class="continue" id="btn2" onclick='statement2()'>ONE WORD</button>
+            <button type="button" class="continue" id="btn3" onclick='statement3()'>Continue</button>
+            <button type="button" class="continue" id="btn4" onclick="statement4()">ONE WORD</button>
             <button type="button" class="continue" id="btn5" onclick="statement5()">Continue</button>
-            <button type="button" class="continue" id ='btn6' onclick = "statement6()">TWO WORDS</button>
-            <button type="button" class="continue" id="btn7" onclick="statement7()">I am button 7</button>
+            <button type="button" class="continue" id='btn6' onclick="statement6()">TWO WORDS</button>
+            <button type="button" class="continue" id="btn7" onclick="statement7()">Continue</button>
+            <button type="button" class="continue" id="btn8" onclick="statement8()">TWO WORDS</button> 
+            <button type="button" class="continue" id="btn9" onclick="statement9()">Continue</button> 
+            <button type="button" class="continue" id="btn10" onclick="statement10()">ONE WORD</button> 
+            <button type="button" class="continue" id="btn11" onclick="statement11()">Continue</button> 
         </div>
     </form>
         </div>
-     
+     <div>
+        <h2 id ="score"></h2>
+     </div>
       
      
       
