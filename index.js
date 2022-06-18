@@ -16,6 +16,7 @@ document.getElementById('btn8').style.display ="none";
 document.getElementById('btn9').style.display ="none";
 document.getElementById('btn10').style.display ="none";
 document.getElementById('btn11').style.display ="none";
+document.getElementById('btn12').style.display="none";
 
 const stopReload=(ev)=>{
     ev.preventDefault();//to stop form from submitting
@@ -26,20 +27,20 @@ const stopReload=(ev)=>{
 function yourScore(){
   document.getElementById('score').innerHTML =`Your score is ${userScore}`  
 }
-
-
 //hides display dialog so new dialog can go into paragraph.
 function hide(){
     document.getElementById('dialog1').innerHTML = "";
 }
 
 function final(){
-    hide();
-    if(userScore>2){
-        document.getElementById('dialog').innerHTML= "I know you cheated, I don't know how, but I'll figure it out. As for now you may pass if you dare. The challenges on the other side of the bridge are much more difficult."; 
-    }else{
         hide();
-        document.getElementById('dialog1').innerHTML = "You must feel pretty dumb right now, huh? Well go lick you wounds somewhere else, you're not crossing my bridge."
+    if(userScore>2){
+        document.getElementById('dialog1').innerHTML= "I know you cheated, I don't know how, but I'll figure it out. As for now you may pass if you dare. The challenges on the other side of the bridge are much more difficult."; 
+    }else{
+        console.log('test final4')
+        hide();
+        console.log('test final5')
+        document.getElementById('dialog1').innerHTML = "You must feel pretty dumb right now, huh?<br> Well go lick you wounds somewhere else,<br> you're not crossing my bridge."
     }
 }
 function statement1(){
@@ -60,25 +61,21 @@ function statement2(){
     document.getElementById('btn3').style.display="";
    
         hide();
-        
+    
     let answer = document.getElementById("users").value
 
     let correctAnswer=answers[0]
     
     if(answer===correctAnswer){
         userScore++;
-        document.getElementById('dialog1').innerHTML ="I guess I'll have to give you that one, but you won't be able to answer the next one!<br>Press the continue button when you're ready.";
+        document.getElementById('dialog1').innerHTML ="I guess I'll have to give you that one, but you won't<br> be able to answer the next one!<br>Press the continue button when you're ready.";
         document.getElementById('btn2').style.display ="none";
         document.getElementById("btn3").style.display=" ";
         yourScore();
-        console.log(userScore);
-       
-    }else{
-        
+    }else{       
         hide();
         document.getElementById("dialog1").innerHTML ="Ha! I knew you couldn't do it. You get another chance though. Click continue when you are ready to resume."
-        yourScore();
-        
+        yourScore();  
     }
 }                          
 //waits for onclick from button, then runs statement 3.
@@ -97,20 +94,17 @@ function statement4(){
     document.getElementById("btn5").style.display= "";
     hide();
     let answer = document.getElementById("users").value
-    
-    let correctAnswer=answers[1]
-    
+    let correctAnswer=answers[1]  
     if(answer===correctAnswer){
         userScore++;
         yourScore();
-    console.log(answer===correctAnswer)
         hide();
-        document.getElementById('dialog1').innerHTML ="Oh you really think you're smart, don't you?<br>You haven't won yet! Press continue to get your third question."
+        document.getElementById('dialog1').innerHTML ="Oh you really think you're smart, don't you?<br>You haven't won yet!<br>Press continue to get your third question."
         
 }else{
 
     hide();
-    document.getElementById('dialog1').innerHTML = "I really thought you'd be more of a challenge. You can press continue to get your third question."
+    document.getElementById('dialog1').innerHTML = "I really thought you'd be more of a challenge.<br> You can press continue to get your third question."
     
     yourScore();
     }
@@ -121,7 +115,7 @@ function statement5(){
     document.getElementById("btn5").style.display="none";
     document.getElementById("btn6").style.display= "";
     hide();
-    document.getElementById("dialog1").innerHTML = "What belongs to you, but other people use it more than you?"
+    document.getElementById("dialog1").innerHTML = "What belongs to you, but other people <br>use it more than you?"
     
 }
 //wait for onclike from button 6, then run statement 6. turn off and on buttons and dialog.checks logic
@@ -129,26 +123,24 @@ function statement6(){
     document.getElementById("btn6").style.display="none";
     document.getElementById("btn7").style.display= "";
     let answer = document.getElementById("users").value
-   
     let correctAnswer=answers[2]
-
     if(answer===correctAnswer){
     userScore++;
     yourScore();
-        console.log("hit")
         hide();
         document.getElementById('dialog1').innerHTML="You got that question right?  You must have cheated!<br> Press continue for your fourth question."
     }else{
         hide();
-        document.getElementById('dialog1').innerHTML="Pathetic! I thought you were smart! Press continue to get your fourth question."
+        document.getElementById('dialog1').innerHTML="Pathetic! I thought you were smart!<br> Press continue to get your fourth question."
         yourScore();
-    }}
+    }
+}
 //wait for click then ask fourth question. button 7 activates this function.
 function statement7(){
     document.getElementById("btn7").style.display="none";
     document.getElementById("btn8").style.display= "";
     hide();
-    document.getElementById('dialog1').innerHTML ="It can't be seen,<br> can't be felt,<br> can't be heard,<br> and can't be smelt.<br> It lies behind stars and under hills, And empty holes it fills. It comes first and follows after, Ends life, and kills laughter. What is it?" 
+    document.getElementById('dialog1').innerHTML ="It can't be seen,<br> can't be felt,<br> can't be heard,<br> and can't be smelt.<br> It lies behind stars and under hills,<br> And empty holes it fills. It comes first<br> and follows after, Ends life, and kills laughter.<br> What is it?" 
 }
 //Wait for answer, onclick and run statement 8;
 function statement8(){
@@ -159,12 +151,11 @@ function statement8(){
     if(answer===correctAnswer){
         userScore++;
         yourScore();
-        console.log("hit")
         hide();
-        document.getElementById('dialog1').innerHTML="What are you doing? How are you getting these answers correct? One last question. Let's finish this. Press continue to get your last question"    
+        document.getElementById('dialog1').innerHTML="What are you doing? How are you getting<br> these answers correct? One last question.<br> Let's finish this.<br> Press continue to get your last question."    
     }else{
         hide();
-        document.getElementById('dialog1').innerHTML= "You're really no match for me are you? Well go ahead and press the continue button to get your last question."
+        document.getElementById('dialog1').innerHTML= "You're really no match for me are you? <br>Well go ahead and press continue<br> to get your last question."
         yourScore();
     }
 }
@@ -174,32 +165,30 @@ function statement9(){
     document.getElementById("btn9").style.display="none";
     document.getElementById("btn10").style.display= "";
     hide();
-    document.getElementById('dialog1').innerHTML = "What is the only word in the English Language that has 3 sets of double letters back to back?"
+    document.getElementById('dialog1').innerHTML = "What is the only word in the English Language<br> that has 3 sets of double letters<br> back to back?"
 }
 //Wait for answer, onclick and run statement 10;
 function statement10(){
-    console.log('test')
     document.getElementById("btn10").style.display="none";
     document.getElementById("btn11").style.display= "";
-    console.log('test')
     hide();
-    console.log('test')
     let answer = document.getElementById("users").value
-    console.log(answer)
     let correctAnswer=answers[4]
-    console.log(correctAnswer)
-    if(answer===correctAnswer){
+    if(answer==correctAnswer){
     userScore++;
     yourScore();
-        console.log("hit")
         hide();
-        document.getElementById('dialog1').innerHTML="You weren't supposed to get the last question right!"
-       final();
+        document.getElementById('dialog1').innerHTML="You weren't supposed to get the last question right! Press continue."
+      
     }else{
 
         hide();
-        document.getElementById('dialog1').innerHTML="Well that last question was pretty hard, for a 3 year old." 
+        document.getElementById('dialog1').innerHTML="Well that last question was pretty hard,<br> for a 3 year old. Press continue." 
          yourScore();
-         final();
     }
+}
+//when button 11 is clicked, run function statement11,
+function statement11(){
+    document.getElementById("btn11").style.display="none";
+    final();
 }

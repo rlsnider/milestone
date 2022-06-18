@@ -2,19 +2,25 @@ body{
     background-image: url("assets/hert-niks-tyI1b2abVKE-unsplash.jpg");
     background-repeat:no-repeat;
     background-size:1200px 900px;
-    
+    Text-align: center;
 }  
 
 #startup{
-    font-family:sans-serif; 
+    font-family:sans-serif;
+    color:black; 
     font-size: 45px;
-    text-shadow: 2px 2px brown;
+    text-shadow: 2px 2px white;
     padding: 50px;
-}
+    text-align: center;
+    margin-left: 50px;
+    
+
+} 
 #dialog1{
     font-family: sans-serif;
     font-size: 45px;
-    text-shadow:2px 2px brown;
+    text-shadow:2px 2px white;
+    text-align: center;
 }
 
 input[type=text]{
@@ -26,6 +32,12 @@ input[type=text]{
     border-radius: 25px;
     text-transform:uppercase;
 
+}
+#score{
+    font-family:Sans-serif;
+    font-size:50px;
+    color: black;
+    text-shadow:3px 3px brown;
 }
 
 
