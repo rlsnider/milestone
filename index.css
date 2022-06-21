@@ -1,7 +1,8 @@
 body{ 
     background-image: url("assets/hert-niks-tyI1b2abVKE-unsplash.jpg");
-    background-size:1200px 900px;
-    Text-align: center;
+    background-size:1600px 900px;
+    text-align: center;
+    background-repeat: no-repeat;
 }  
 
 #startup{
