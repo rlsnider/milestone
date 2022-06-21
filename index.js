@@ -75,7 +75,7 @@ function statement2(){
         document.getElementById('question1').style.display='none';
         document.getElementById('dialog1').innerHTML ="I guess I'll have to give you that one, but you won't<br> be able to answer the next one!<br>Press the continue button when you're ready.";
         document.getElementById('submit1').style.display ="none";
-        document.getElementById("continue2").style.display='';
+        document.getElementById('continue2').style.display='';
         yourScore();
     }else{       
         hide();
@@ -84,26 +84,28 @@ function statement2(){
     }
 }                          
 //waits for onclick from button, then runs statement 3.
-//turn off display of button 3, open btn 4. 
+//turn off display of continue2 and opens submit2.
 //turn off dialog, get ready to add text.
-/*function statement3(){
-    document.getElementById("btn3").style.display="none";
-    document.getElementById("btn4").style.display= "";
+function statement3(){
+    document.getElementById('continue2').style.display='none';
+    document.getElementById('submit2').style.display= '';
     hide();
     document.getElementById("dialog1").innerHTML ="Poor people have it. <br> Rich people need it.<br> If you eat it you die.<br> What is it?"
+    document.getElementById('question2').style.display = '';
 }
 //waits for onclick from button 4, then runs statement 4.
 //turn off and on buttons, and dialog, checks logic for question 2.
 function statement4(){
-    document.getElementById("btn4").style.display="none";
-    document.getElementById("btn5").style.display= "";
+    document.getElementById('submit2').style.display="none";
+    document.getElementById('continue3').style.display= "";
     hide();
-    let answer = document.getElementById("users").value
+    let answer = document.getElementById('question2').value
     let correctAnswer=answers[1]  
     if(answer===correctAnswer){
         userScore++;
         yourScore();
         hide();
+        document.getElementById('question2').style.display="none";
         document.getElementById('dialog1').innerHTML ="Oh you really think you're smart, don't you?<br>You haven't won yet!<br>Press continue to get your third question."
         
 }else{
@@ -116,7 +118,7 @@ function statement4(){
 }
 //wait for onclick from button 5, then run statement 5.
 //trun off and on buttons and dialog, gives 3rd question.
-function statement5(){
+/*function statement5(){
     document.getElementById("btn5").style.display="none";
     document.getElementById("btn6").style.display= "";
     hide();
