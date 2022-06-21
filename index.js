@@ -6,21 +6,24 @@ let userScore = 0;
 
 
 //set all buttons invisibile except for start button.
-document.getElementById("btn2").style.display ="none";
-document.getElementById('btn3').style.display ="none";
-document.getElementById('btn4').style.display ="none";
-document.getElementById('btn5').style.display ="none";
-document.getElementById('btn6').style.display ="none";
-document.getElementById('btn7').style.display ="none";
-document.getElementById('btn8').style.display ="none";
-document.getElementById('btn9').style.display ="none";
-document.getElementById('btn10').style.display ="none";
-document.getElementById('btn11').style.display ="none";
-document.getElementById('btn12').style.display="none";
+document.getElementById('continue1').style.display ='';
+document.getElementById('submit1').style.display ='none';
+document.getElementById('continue2').style.display ="none";
+document.getElementById('submit2').style.display ="none";
+document.getElementById('continue3').style.display ="none";
+document.getElementById('submit3').style.display ="none";
+document.getElementById('continue4').style.display ="none";
+document.getElementById('submit4').style.display ="none";
+document.getElementById('continue5').style.display ="none";
+document.getElementById('submit5').style.display ="none";
+document.getElementById('continue6').style.display ="none";
 
-const stopReload=(ev)=>{
-    ev.preventDefault();//to stop form from submitting
-  }
+document.getElementById('question1').style.display='none';
+document.getElementById('question2').style.display='none';
+document.getElementById('question3').style.display='none';
+document.getElementById('question4').style.display='none';
+
+
 //Set UserScore:
 //add one to score if answer is correct, 0 if answer is wrong;
 //Store score in var; Displays score on page.
@@ -32,7 +35,7 @@ function hide(){
     document.getElementById('dialog1').innerHTML = "";
 }
 
-function final(){
+/*function final(){
         hide();
     if(userScore>2){
         document.getElementById('dialog1').innerHTML= "I know you cheated, I don't know how, but I'll figure it out. As for now you may pass if you dare. The challenges on the other side of the bridge are much more difficult."; 
@@ -42,35 +45,37 @@ function final(){
         console.log('test final5')
         document.getElementById('dialog1').innerHTML = "You must feel pretty dumb right now, huh?<br> Well go lick you wounds somewhere else,<br> you're not crossing my bridge."
     }
-}
+}*/
 function statement1(){
     
-    //hide starting button show button 2
-    document.getElementById('startBtn').style.display ="none";
-    document.getElementById('btn2').style.display = "";
+    //hide continue 1, open submit 1;
+    document.getElementById('continue1').style.display ='none';
+    document.getElementById('submit1').style.display = "";
     //hide first dialog and show first question
     document.getElementById('startup').style.display="none";
     document.getElementById('dialog1').innerHTML = "Only one color, but not one size,<br> stuck at the bottom, yet easily flies.<br>Present in sun, but not in rain,<br> doing no harm and feeling no pain.<br> What am I?";
+    document.getElementById('question1').style.display ="";
 }
 //waits for onclick from button, then runs statement 2
-//turn off display of btn2, open up btn3, turn off dialog1, 
+//turn off display of continue1, open up submit2, turn off dialog1, 
 //creates new object from "userAnswer" add(push)answer into array, set Answer to string with JSON. 
 //compare userinput to 0 in answers array, if match, turn on dialog2, turn off button 2, open up button 3.
 function statement2(){
-    document.getElementById("btn2").style.display ="none";
-    document.getElementById('btn3').style.display="";
+    document.getElementById('continue1').style.display ='none';
+    document.getElementById('submit1').style.display='';
    
         hide();
     
-    let answer = document.getElementById("users").value
+    let answer = document.getElementById('question1').value
 
     let correctAnswer=answers[0]
     
     if(answer===correctAnswer){
         userScore++;
+        document.getElementById('question1').style.display='none';
         document.getElementById('dialog1').innerHTML ="I guess I'll have to give you that one, but you won't<br> be able to answer the next one!<br>Press the continue button when you're ready.";
-        document.getElementById('btn2').style.display ="none";
-        document.getElementById("btn3").style.display=" ";
+        document.getElementById('submit1').style.display ="none";
+        document.getElementById("continue2").style.display='';
         yourScore();
     }else{       
         hide();
@@ -81,7 +86,7 @@ function statement2(){
 //waits for onclick from button, then runs statement 3.
 //turn off display of button 3, open btn 4. 
 //turn off dialog, get ready to add text.
-function statement3(){
+/*function statement3(){
     document.getElementById("btn3").style.display="none";
     document.getElementById("btn4").style.display= "";
     hide();
@@ -191,4 +196,4 @@ function statement10(){
 function statement11(){
     document.getElementById("btn11").style.display="none";
     final();
-}
+}*/
