@@ -79,6 +79,9 @@ function statement2(){
         yourScore();
     }else{       
         hide();
+        document.getElementById('question1').style.display ="none";
+        document.getElementById('submit1').style.display ='none';
+        document.getElementById('continue2').style.display="";
         document.getElementById("dialog1").innerHTML ="Ha! I knew you couldn't do it. You get another chance though. Click continue when you are ready to resume."
         yourScore();  
     }
@@ -105,12 +108,13 @@ function statement4(){
         userScore++;
         yourScore();
         hide();
-        document.getElementById('question2').style.display="none";
+        document.getElementById('question2').style.display='none';
         document.getElementById('dialog1').innerHTML ="Oh you really think you're smart, don't you?<br>You haven't won yet!<br>Press continue to get your third question."
         
 }else{
 
     hide();
+    document.getElementById('question2').style.display="none";
     document.getElementById('dialog1').innerHTML = "I really thought you'd be more of a challenge.<br> You can press continue to get your third question."
     
     yourScore();
@@ -118,32 +122,36 @@ function statement4(){
 }
 //wait for onclick from button 5, then run statement 5.
 //trun off and on buttons and dialog, gives 3rd question.
-/*function statement5(){
-    document.getElementById("btn5").style.display="none";
-    document.getElementById("btn6").style.display= "";
+function statement5(){
+    document.getElementById('continue3').style.display="none";
+    document.getElementById('submit3').style.display="";
+    
     hide();
+    document.getElementById('question3').style.display="";
     document.getElementById("dialog1").innerHTML = "What belongs to you, but other people <br>use it more than you?"
     
 }
 //wait for onclike from button 6, then run statement 6. turn off and on buttons and dialog.checks logic
 function statement6(){
-    document.getElementById("btn6").style.display="none";
-    document.getElementById("btn7").style.display= "";
-    let answer = document.getElementById("users").value
+    document.getElementById("submit3").style.display="none";
+    document.getElementById("continue4").style.display= "";
+    let answer = document.getElementById("question3").value
     let correctAnswer=answers[2]
     if(answer===correctAnswer){
     userScore++;
     yourScore();
         hide();
+        document.getElementById('question3').style.display="none";
         document.getElementById('dialog1').innerHTML="You got that question right?  You must have cheated!<br> Press continue for your fourth question."
     }else{
         hide();
+        document.getElementById('question3').style.display= "none";
         document.getElementById('dialog1').innerHTML="Pathetic! I thought you were smart!<br> Press continue to get your fourth question."
         yourScore();
     }
 }
 //wait for click then ask fourth question. button 7 activates this function.
-function statement7(){
+/*function statement7(){
     document.getElementById("btn7").style.display="none";
     document.getElementById("btn8").style.display= "";
     hide();
